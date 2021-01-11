@@ -1,0 +1,11 @@
+/* Bootstrap replacement css */
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: blueviolet;
+    border-color: purple;
+}

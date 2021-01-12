@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="./Assets/CSS/styles.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+<section>
+    <div class="container text-center py-2">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary">HIGH SCORES</button>
+            </div>
+            <div class="col">
+                <p>Time: <span id="counter"></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="startText">
+    <div class="container text-center pt-5">
+        <h1>Code Quiz!</h1>
+        <p>Click start below to quiz your knowledge on JavaScript!</p>
+    </div>
+</section>
+
+<section>
+  <div class="container text-center">
+    <div id="question-container" class="hide py-5">
+      <div id="question">Question</div>
+      <div id="answer-buttons" class="btn-grid pt-2">
+        <button class="btn btn-primary">Answer 1</button>
+        <button class="btn btn-primary">Answer 2</button>
+        <button class="btn btn-primary">Answer 3</button>
+        <button class="btn btn-primary">Answer 4</button>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="start-btn" class="start-btn btn btn-primary">Start</button>
+      <button id="next-btn" class="next-btn btn btn-primary hide">Next</button>
+      <button id="end-btn" class="end-btn btn btn-primary hide">End</button>
+    </div>
+  </div>
+</section>
+
+<script src="./script.js"></script>
+</body>
+</html>

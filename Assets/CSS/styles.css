@@ -9,3 +9,7 @@ a {
     background-color: blueviolet;
     border-color: purple;
 }
+
+.hide {
+    display: none;
+}

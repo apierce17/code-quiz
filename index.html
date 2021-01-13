@@ -11,70 +11,47 @@
 </head>
 <body class="text-light bg-dark">
 
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <a href="">HIGH SCORES</a>
-            </div>
-            <div class="col">
-                <div>Time: <span id="time"></span></div>
+    <section>
+        <div id="timeLeft" class="container text-center pt-2 hide">
+            <div class="row">
+                <div class="col">
+                    <p class="py-2">Time: <span id="time">20</span></p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-  <div class="container">
-    <div id="quiestionOne" class="hide">
-      <div id="question">What is 2+2?</div>
-      <div id="answer-buttons" class="btn-grid">
-        <button class="btn btn-primary">4</button>
-        <button class="btn btn-primary">22</button>
-        <button class="btn btn-primary">44</button>
-        <button class="btn btn-primary">2</button>
-      </div>
-    </div>
-
-    <div id="save-score" class="container text-center p-5 hide">
-        <div class="jumbotron">
-                <h1>You ran out of time!</h1>
-                <p>Enter your initals below!</p>
-            <form class="p-2">
-                <input type="name" class="form-control" id="InputInitials">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+    <section>
+        <div class="container d-flex justify-content-center">
+            <div class="jumbotron text-center p-5">
+                <h1 id="questionPrompt" class="mb-5">Welcome to the Code Quiz!</h1>
+                <p id="intro">Click start to test your knowledge on JavaScript!</p>
+                <button onclick="startBtn()" id="start-btn" class="btn btn-primary" id="start-quiz">Start!</button>
+                <div id="answer-btns" class="hide">
+                        <li onclick="buttonClicked(1)" id="answer1" class="btn btn-primary"></li>
+                        <li onclick="buttonClicked(2)" id="answer2" class="btn btn-primary"></li>
+                        <li onclick="buttonClicked(3)" id="answer3" class="btn btn-primary"></li>
+                        <li onclick="buttonClicked(4)" id="answer4" class="btn btn-primary"></li>
+                </div>
+                <button onclick="nextQuestion()" id="next-btn" class="btn btn-primary btn-lrg hide mt-5">Next</button>
+                <button onclick="continueButton()" id="continue-btn" class="btn btn-primary btn-lrg hide mt-5">Continue</button>
+                
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div id="high-scores" class="container text-center">
-        <h1>High Scores!</h1>
-        <table class="table text-light">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><span id="name-one"></span></td>
-                    <td><span id="score-one"></span></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td><span id="name-two"></span></td>
-                    <td><span id="score-two"></span></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="controls">
-      <button id="start-btn" class="start-btn btn btn-primary">Start</button>
-      <button id="next-btn" class="next-btn btn btn-primary hide">Next</button>
-      <button id="end-btn" class="end-btn btn btn-primary hide">Finish</button>
-    </div>
-  </div>
+    <section>
+        <div id="save-score" class="container text-center p-5 hide">
+            <div class="jumbotron">
+                    <p>Enter your initals below!</p>
+                <form id="initials" class="p-2">
+                    <input type="name" class="form-control" id="InputInitials">
+                    <br>
+                    <button onclick="startBtn()" id="btn" class="btn btn-primary">Click to Add</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>

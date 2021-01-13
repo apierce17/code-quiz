@@ -1,10 +1,4 @@
 /* Bootstrap replacement css */
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
 .btn-primary {
     background-color: blueviolet;
     border-color: purple;
